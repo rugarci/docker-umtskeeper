@@ -11,14 +11,14 @@ Tested on Raspberry Pi Zero 2
 ## Usage
 
 ```bash
-docker run -it --rm --name umtskeeper umtskeeper --sakisoperators "USBINTERFACE='0' USBMODEM='19d2:1180' APN='gprs-service.com' " --sakisswitches "--sudo --console" --log
+docker run -it --rm --name umtskeeper rugarci/umtskeeper --sakisoperators "USBINTERFACE='0' USBMODEM='19d2:1180' APN='gprs-service.com' " --sakisswitches "--sudo --console" --log
 ```
 
 For Docker compose
 
 ```yaml
 umtskeeper:
-    image: rugarci/docker-umtskeeper
+    image: rugarci/umtskeeper
     command: --sakisoperators "USBINTERFACE='0' USBMODEM='19d2:1180' APN='gprs-service.com' " --sakisswitches "--sudo --console" --log --logfile /dev/stdout --httpserver
     privileged: true
     network_mode: host
