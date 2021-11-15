@@ -21,10 +21,7 @@ umtskeeper:
     image: rugarci/docker-umtskeeper
     command: --sakisoperators "USBINTERFACE='0' USBMODEM='19d2:1180' APN='gprs-service.com' " --sakisswitches "--sudo --console" --log --logfile /dev/stdout --httpserver
     privileged: true
-    networks:
-      - rubenet_net
-    ports:
-      - 8000:8000
+    network_mode: host
     cap_add:
       - net_admin
       - net_raw
