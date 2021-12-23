@@ -14,7 +14,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.vcs-type="Git" \
     org.label-schema.schema-version="1.0" \
     org.opencord.component.umtskeeper.version=v$UMTSKEEPER_VERSION \
-    org.opencord.component.umtskeeper.vcs-url=$"https://github.com/daladim/umtskeeper"
+    org.opencord.component.umtskeeper.vcs-url="https://github.com/daladim/umtskeeper"
 
 RUN apt-get update && apt-get install -y --force-yes net-tools usbutils ppp
 
